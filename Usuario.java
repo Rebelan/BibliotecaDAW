@@ -2,7 +2,7 @@
 public class Usuario{
     private String nomUsuario;
     private String passwd;
-
+    private boolean admin;
 
 
     public Usuario() {
