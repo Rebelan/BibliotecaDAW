@@ -1,3 +1,4 @@
+// Esta clase contiene las características del usuario, así como los libros que tiene en propiedad
 
 public class Usuario{
     private String nomUsuario;

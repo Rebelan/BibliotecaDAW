@@ -1,3 +1,5 @@
+// Esta clase contiene las características de los libros
+
 public class Libro {
     private String titulo;
     private String autor;
