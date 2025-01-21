@@ -2,7 +2,7 @@
 public class Usuario{
     private String nomUsuario;
     private String passwd;
-    private Libro[] prestado;
+    private Libro[] prestado = new Libro[5];
 
 
     public String getNomUsuario() {
