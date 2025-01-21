@@ -3,6 +3,7 @@ public class Usuario{
     private String nomUsuario;
     private String passwd;
     private boolean admin;
+    private Libro[] prestados= new Libro[5];
 
     public String getNomUsuario() {
         return this.nomUsuario;
