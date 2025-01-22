@@ -4,7 +4,6 @@ public class Usuario{
     private String nomUsuario;
     private String passwd;
     private boolean admin;
-    private Libro[] prestados= new Libro[5];
 
     public String getNomUsuario() {
         return this.nomUsuario;
@@ -21,7 +20,9 @@ public class Usuario{
     public void setPasswd(String passwd) {
         this.passwd = passwd;
     }
-
+    public boolean getAdmin(){
+        return this.admin;
+    }
 
     public Usuario() {
         this.nomUsuario = "";
