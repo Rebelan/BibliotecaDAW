@@ -26,11 +26,13 @@ public class Usuario{
     public Usuario() {
         this.nomUsuario = "";
         this.passwd = "";
+        this.admin = false;
     }
 
 
-    public Usuario(String nomUsuario, String passwd){
+    public Usuario(String nomUsuario, String passwd, boolean admin) {
         this.nomUsuario = nomUsuario;
         this.passwd = passwd;
+        this.admin = admin;
     }
 }
