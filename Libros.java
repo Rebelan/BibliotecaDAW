@@ -74,5 +74,16 @@ public class Libros {
       }
    }
 
+
+   @Override
+   public String toString() {
+      String stringLibro = "";
+      for (int i = 0; i < numLibros; i++) {
+         stringLibro += libros[i].toString() + "\n";
+      }
+      return stringLibro;
+   }
+
+
    
 }
