@@ -3,16 +3,13 @@ import java.util.Scanner;
 public class GestorUsuarios {
     private Usuario[] usuarios;
     private int numUsuarios;
-    private Libro[] prestados;
-    private int numPrestados;
+    
 
     public static Scanner sc = new Scanner(System.in);
 
     public GestorUsuarios() {
         this.usuarios = new Usuario[20];
         this.numUsuarios = 0;
-        this.prestados = new Libro[10];
-        this.numPrestados = 0;
     }
 
     public void nuevoUsuarioAdmin(Usuario usuario) {
@@ -44,9 +41,6 @@ public class GestorUsuarios {
         }
         
     }
-    public void nuevoPrestamo(Libro libro) {
-        prestados[numPrestados] = libro;
-        numPrestados++;
-    }
+    
 
 }
