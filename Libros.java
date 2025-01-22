@@ -1,4 +1,4 @@
-// Esta clase contiene un array con todos los libros de la biblioteca
+// Esta clase es la gestora de la clase libro, y contiene un array de libros y un contador de libros
 
 import java.util.Arrays;
 
