@@ -67,6 +67,14 @@ public class Biblioteca {
 
     }
 
+    public static void menuVisualUsuario() {
+        System.out.println("1. Consultar libros disponibles");
+        System.out.println("2. Pedir prestado un libro");
+        System.out.println("3. Devolver un libro");
+        System.out.println("4. Salir");
+
+    }
+
     public static void AñadirLibro() {
 
     }
