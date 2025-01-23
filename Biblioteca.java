@@ -47,6 +47,9 @@ public class Biblioteca {
                 case 6:
                     gestor.ConsultarInformacionUsuarios();
                     break;
+                case 7:
+                    libros.ConsultarInformacionLibros();
+                    break;
                 case 8:
                     flag = false;
                     break;

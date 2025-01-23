@@ -49,11 +49,11 @@ public class Libros {
       return Arrays.copyOf(resultado, autorLleno);
    }
 
-   public Libro[] buscarPorCategoria(String categoria){
+   public Libro[] buscarPorCategoria(String categoria) {
       Libro[] resultado = new Libro[tam];
       int catLlena = 0;
       for (int i = 0; i < numLibros; i++) {
-         if(libros[i].getCategoria().equals(categoria)){
+         if (libros[i].getCategoria().equals(categoria)) {
             resultado[catLlena] = libros[i];
             catLlena++;
          }
@@ -74,16 +74,15 @@ public class Libros {
       }
    }
 
-
-   @Override
-   public String toString() {
-      String stringLibro = "";
+   public void ConsultarInformacionLibros() {
+      System.out.println("Los libros de la biblioteca son: ");
       for (int i = 0; i < numLibros; i++) {
-         stringLibro += libros[i].toString() + "\n";
+         System.out.println("Título: " + libros[i].getTitulo());
+         System.out.println("Autor: " + libros[i].getAutor());
+         System.out.println("Categoría: " + libros[i].getCategoria());
+         System.out.println("Disponible: " + libros[i].getDisponible());
+         System.out.println("-------------");
       }
-      return stringLibro;
    }
 
-
-   
 }

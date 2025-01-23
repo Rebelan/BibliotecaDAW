@@ -1,6 +1,6 @@
 // Esta clase contiene las características del usuario, así como los libros que tiene en propiedad
 
-public class Usuario{
+public class Usuario {
     private String nomUsuario;
     private String passwd;
     private boolean admin;
@@ -22,7 +22,8 @@ public class Usuario{
     public void setPasswd(String passwd) {
         this.passwd = passwd;
     }
-    public boolean getAdmin(){
+
+    public boolean getAdmin() {
         return this.admin;
     }
 
@@ -33,7 +34,6 @@ public class Usuario{
         this.prestados = new Libro[10];
         this.numPrestados = 0;
     }
-
 
     public Usuario(String nomUsuario, String passwd, boolean admin) {
         this();
