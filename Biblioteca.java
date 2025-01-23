@@ -51,6 +51,58 @@ public class Biblioteca {
                     libros.ConsultarInformacionLibros();
                     break;
                 case 8:
+                    System.out.println("Introduce el título del libro: ");
+                    String tituloBuscar = sc.nextLine();
+                    Libro libroEncontrado = libros.buscarLibro(tituloBuscar);
+                    if (libroEncontrado != null) {
+                        System.out.println("El libro encontrado es: ");
+                        System.out.println("-------------");
+                        System.out.println("Título: " + libroEncontrado.getTitulo());
+                        System.out.println("Autor: " + libroEncontrado.getAutor());
+                        System.out.println("Categoría: " + libroEncontrado.getCategoria());
+                        System.out.println("Disponible: " + libroEncontrado.getDisponible());
+                        System.out.println("-------------");
+                    } else {
+                        System.out.println("No se ha encontrado el libro");
+                    }
+                    break;
+                case 9:
+                    System.out.println("Introduce el autor del libro: ");
+                    String autorBuscar = sc.nextLine();
+                    Libro[] librosAutor = libros.buscarPorAutor(autorBuscar);
+                    if (librosAutor.length > 0) {
+                        System.out.println("Los libros encontrados son: ");
+                        for (int i = 0; i < librosAutor.length; i++) {
+                            System.out.println("-------------");
+                            System.out.println("Título: " + librosAutor[i].getTitulo());
+                            System.out.println("Autor: " + librosAutor[i].getAutor());
+                            System.out.println("Categoría: " + librosAutor[i].getCategoria());
+                            System.out.println("Disponible: " + librosAutor[i].getDisponible());
+                            System.out.println("-------------");
+                        }
+                    } else {
+                        System.out.println("No se han encontrado libros");
+                    }
+                    break;
+                case 10:
+                    System.out.println("Introduce la categoría del libro: ");
+                    String categoriaBuscar = sc.nextLine();
+                    Libro[] librosCategoria = libros.buscarPorCategoria(categoriaBuscar);
+                    if (librosCategoria.length > 0) {
+                        System.out.println("Los libros encontrados son: ");
+                        for (int i = 0; i < librosCategoria.length; i++) {
+                            System.out.println("-------------");
+                            System.out.println("Título: " + librosCategoria[i].getTitulo());
+                            System.out.println("Autor: " + librosCategoria[i].getAutor());
+                            System.out.println("Categoría: " + librosCategoria[i].getCategoria());
+                            System.out.println("Disponible: " + librosCategoria[i].getDisponible());
+                            System.out.println("-------------");
+                        }
+                    } else {
+                        System.out.println("No se han encontrado libros");
+                    }
+                    break;
+                case 11:
                     flag = false;
                     break;
             }
@@ -66,7 +118,10 @@ public class Biblioteca {
         System.out.println("5. Devolver un libro");
         System.out.println("6. Consultar información de los usuarios");
         System.out.println("7. Consultar información de los libros");
-        System.out.println("8. Salir");
+        System.out.println("8. Buscar un libro por titulo");
+        System.out.println("9. Buscar libros por autor");
+        System.out.println("10. Buscar un libro por categoria");
+        System.out.println("11. Salir");
 
     }
 
