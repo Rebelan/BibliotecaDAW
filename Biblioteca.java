@@ -10,13 +10,26 @@ public class Biblioteca {
         gestor.nuevoUsuario(usuario1);
         Usuario usuario2 = new Usuario("Juan", "5678", true);
         gestor.nuevoUsuario(usuario2);
+        Libros libros = new Libros();
 
         boolean flag = true;
+        // Login de la biblioteca
+
         while (flag) {
             System.out.println("Introduce una opción");
-            menuVisual();
+            menuVisualAdmin();
             int op = Integer.parseInt(sc.nextLine());
             switch (op) {
+                case 1:
+                    System.out.println("Introduce el título del libro: ");
+                    String titulo = sc.nextLine();
+                    System.out.println("Introduce el autor del libro: ");
+                    String autor = sc.nextLine();
+                    System.out.println("Introduce la categoría del libro: ");
+                    String categoria = sc.nextLine();
+                    Libro libro = new Libro(titulo, autor, categoria, true);
+                    libros.nuevoLibro(libro);
+                    break;
                 case 3:
                     System.out.println("Introduce el nombre del usuario: ");
                     String nombre = sc.nextLine();
@@ -31,10 +44,10 @@ public class Biblioteca {
                     Usuario usuario = new Usuario(nombre, passwd, esAdmin);
                     gestor.nuevoUsuario(usuario);
                     break;
-                case 7:
+                case 6:
                     gestor.ConsultarInformacionUsuarios();
                     break;
-                case 9:
+                case 8:
                     flag = false;
                     break;
             }
@@ -42,16 +55,19 @@ public class Biblioteca {
 
     }
 
-    public static void menuVisual() {
+    public static void menuVisualAdmin() {
         System.out.println("1. Añadir un libro");
         System.out.println("2. Eliminar un libro");
         System.out.println("3. Añadir un usuario");
-        System.out.println("4. Eliminar un usuario");
-        System.out.println("5. Prestar un libro");
-        System.out.println("6. Devolver un libro");
-        System.out.println("7. Consultar información de los usuarios");
-        System.out.println("8. Consultar información de los libros");
-        System.out.println("9. Salir");
+        System.out.println("4. Pedir un libro");
+        System.out.println("5. Devolver un libro");
+        System.out.println("6. Consultar información de los usuarios");
+        System.out.println("7. Consultar información de los libros");
+        System.out.println("8. Salir");
+
+    }
+
+    public static void AñadirLibro() {
 
     }
 }
