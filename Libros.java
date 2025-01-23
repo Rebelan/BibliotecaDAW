@@ -73,16 +73,19 @@ public class Libros {
          return false;
       }
    }
-
-
-   @Override
-   public String toString() {
-      String stringLibro = "";
-      for (int i = 0; i < numLibros; i++) {
-         stringLibro += libros[i].toString() + "\n";
-      }
-      return stringLibro;
+   public void ConsultarInformacionLibros(){
+     System.out.println("Los libros de la biblioteca son: ");
+       for (int i = 0; i < numLibros; i++) {
+          System.out.println("Título: " + libros[i].getTitulo());
+          System.out.println("Autor: " + libros[i].getAutor());
+          System.out.println("Categoría: " + libros[i].getCategoria());
+          System.out.println("Disponible: " + libros[i].getDisponible());
+          System.out.println("-------------");
+       }
    }
+
+
+  
 
 
    
