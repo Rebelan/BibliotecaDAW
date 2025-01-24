@@ -133,6 +133,12 @@ public class Biblioteca {
                     break;
             }
         }
+        System.out.println("----Informe----");
+        System.out.println("Préstamos totales: ");
+        System.out.println("Préstamos activos: ");
+        System.out.println("Libros más prestados: ");
+        gestor.usuarioPrestamos();
+
 
         
 
@@ -159,6 +165,10 @@ public class Biblioteca {
         System.out.println("3. Devolver un libro");
         System.out.println("4. Salir");
 
+    }
+
+    public static void informePorPantalla() {
+       
     }
 
 }
