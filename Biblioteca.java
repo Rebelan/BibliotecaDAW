@@ -159,4 +159,12 @@ public class Biblioteca {
 
     }
 
+    public static void informePorPantalla() {
+        System.out.println("----Informe----");
+        System.out.println("Préstamos totales: ");
+        System.out.println("Préstamos activos: ");
+        System.out.println("Libros más prestados: ");
+        System.out.println("Usuario con más préstamos activos: ");
+    }
+
 }
