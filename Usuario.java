@@ -27,6 +27,10 @@ public class Usuario {
         return this.admin;
     }
 
+    public int getNumPrestados() {
+        return this.numPrestados;
+    }
+
     public Usuario() {
         this.nomUsuario = "";
         this.passwd = "";
@@ -41,10 +45,12 @@ public class Usuario {
         this.passwd = passwd;
         this.admin = admin;
     }
+
     public void TomarPrestado(Libro libro) {
         prestados[numPrestados] = libro;
         numPrestados++;
     }
+
     public void DevolverLibro(String titulo) {
         int i = 0;
         boolean encontrado = false;
