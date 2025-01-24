@@ -138,10 +138,6 @@ public class Biblioteca {
         System.out.println("Préstamos activos: ");
         System.out.println("Libros más prestados: ");
         gestor.usuarioPrestamos();
-
-
-        
-
     }
 
     public static void menuVisualAdmin() {
@@ -168,7 +164,7 @@ public class Biblioteca {
     }
 
     public static void informePorPantalla() {
-       
+
     }
 
 }

@@ -1,15 +1,18 @@
 public class GestorPrestamos {
     private Libro[] prestados;
     private int indice;
+    private int totalPrestamos;
 
     public GestorPrestamos() {
         this.prestados = new Libro[20];
         this.indice = 0;
+        this.totalPrestamos = 0;
     }
 
     public void realizarPrestamo(Libro prestado) {
         prestados[indice] = prestado;
         indice++;
+        totalPrestamos++;
         System.out.println("El préstamo se ha realizado correctamente");
     }
 
