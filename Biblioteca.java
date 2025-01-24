@@ -7,6 +7,7 @@ public class Biblioteca {
     public static void main(String[] args) {
         Usuario usuario1 = new Usuario("Pepe", "1234", true);
         GestorUsuarios gestor = new GestorUsuarios();
+        GestorPrestamos prestamos = new GestorPrestamos();
         gestor.nuevoUsuario(usuario1);
         Usuario usuario2 = new Usuario("Juan", "5678", true);
         gestor.nuevoUsuario(usuario2);
@@ -43,6 +44,31 @@ public class Biblioteca {
                     }
                     Usuario usuario = new Usuario(nombre, passwd, esAdmin);
                     gestor.nuevoUsuario(usuario);
+                    break;
+                case 4:
+                    System.out.println("Introduce el título del libro: ");
+                    String tituloPrestar = sc.nextLine();
+                    Libro libroPrestar = libros.buscarLibro(tituloPrestar);
+                    if (libroPrestar != null) {
+                        libros.prestarLibro(libroPrestar);
+                        prestamos.realizarPrestamo(libroPrestar);
+                        usuario1.TomarPrestado(libroPrestar);
+
+                    } else {
+                        System.out.println("No se ha encontrado el libro");
+                    }
+                    break;
+                case 5:
+                    System.out.println("Introduce el título del libro: ");
+                    String tituloDevolver = sc.nextLine();
+                    Libro libroDevolver = libros.buscarLibro(tituloDevolver);
+                    if (libroDevolver != null) {
+                        libros.devolverLibro(libroDevolver);
+                        prestamos.devolverPrestamo(tituloDevolver);
+                        usuario1.DevolverLibro(tituloDevolver);
+                    } else {
+                        System.out.println("No se ha encontrado el libro");
+                    }
                     break;
                 case 6:
                     gestor.ConsultarInformacionUsuarios();
@@ -133,7 +159,4 @@ public class Biblioteca {
 
     }
 
-    public static void AñadirLibro() {
-
-    }
 }

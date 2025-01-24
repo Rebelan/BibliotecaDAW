@@ -84,5 +84,11 @@ public class Libros {
          System.out.println("-------------");
       }
    }
-
+   public void prestarLibro(Libro libro) {
+      libro.setDisponible(false);
+      libro.setNumPrestado(libro.getNumPrestado() + 1);
+   }
+   public void devolverLibro(Libro libro) {
+      libro.setDisponible(true);
+   }
 }

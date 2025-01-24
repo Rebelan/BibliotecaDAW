@@ -5,12 +5,14 @@ public class Libro {
     private String autor;
     private String categoria;
     private boolean disponible;
+    private int numPrestado;
 
     public Libro() {
         this.titulo = "";
         this.autor = "";
         this.categoria = "";
         this.disponible = false;
+        this.numPrestado = 0;
     }
 
     public Libro(String titulo, String autor, String categoria, boolean disponible) {
@@ -18,6 +20,7 @@ public class Libro {
         this.autor = autor;
         this.categoria = categoria;
         this.disponible = disponible;
+        this.numPrestado = 0;
     }
 
 
@@ -55,6 +58,12 @@ public class Libro {
 
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
+    }
+    public int getNumPrestado() {
+        return this.numPrestado;
+    }
+    public void setNumPrestado(int numPrestado) {
+        this.numPrestado = numPrestado;
     }
 
     
