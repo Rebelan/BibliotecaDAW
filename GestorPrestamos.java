@@ -3,6 +3,32 @@ public class GestorPrestamos {
     private int indice;
     private int totalPrestamos;
 
+
+    public Libro[] getPrestados() {
+        return this.prestados;
+    }
+
+    public void setPrestados(Libro[] prestados) {
+        this.prestados = prestados;
+    }
+
+    public int getIndice() {
+        return this.indice;
+    }
+
+    public void setIndice(int indice) {
+        this.indice = indice;
+    }
+
+    public int getTotalPrestamos() {
+        return this.totalPrestamos;
+    }
+
+    public void setTotalPrestamos(int totalPrestamos) {
+        this.totalPrestamos = totalPrestamos;
+    }
+
+
     public GestorPrestamos() {
         this.prestados = new Libro[20];
         this.indice = 0;
