@@ -23,4 +23,17 @@ public class GestorUsuarios {
         }
     }
 
+    public void usuarioPrestamos(){
+
+        int aux = 0;
+        String nombre="";
+        for (int i = 0; i < usuarios.length; i++) {
+            if (aux < usuarios[i].getNumPrestados()) {
+                aux = usuarios[i].getNumPrestados();
+                nombre = usuarios[i].getNomUsuario();
+            }
+        }
+        System.out.println("El usuario: "+nombre+" es el que mas prestamos tiene con "+aux+" libros"); 
+    }
+
 }

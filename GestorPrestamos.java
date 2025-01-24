@@ -1,21 +1,19 @@
 public class GestorPrestamos {
-    private Libro[] prestados;  
+    private Libro[] prestados;
     private int indice;
-
 
     public GestorPrestamos() {
         this.prestados = new Libro[20];
         this.indice = 0;
     }
 
-
-    public void realizarPrestamo(Libro prestado){
+    public void realizarPrestamo(Libro prestado) {
         prestados[indice] = prestado;
-        indice++;  
-        System.out.println("El préstamo se ha realizado correctamente"); 
+        indice++;
+        System.out.println("El préstamo se ha realizado correctamente");
     }
 
-    public void devolverPrestamo(String titulo){
+    public void devolverPrestamo(String titulo) {
         int i = 0;
         boolean encontrado = false;
         while (i < indice && !encontrado) {
@@ -34,9 +32,11 @@ public class GestorPrestamos {
         } else {
             System.out.println("El libro no se ha encontrado");
         }
-        
-        
+
     }
 
+    public void mostrarPrestamos() {
+
+    }
 
 }
