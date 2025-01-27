@@ -118,7 +118,12 @@ public class Libros {
          }
       }
       for (int i = 0; i < numLibros; i++) {
-         System.out.println("Título: " + libros[i].getTitulo() + " Número de veces prestado: " + libros[i].getNumPrestado());
+         System.out.println("----------------");
+         System.out.println("Título: " + libros[i].getTitulo());
+         System.out.println("Autor: " + libros[i].getAutor());
+         System.out.println("Categoría: " + libros[i].getCategoria());
+         System.out.println("Número de veces prestado: " + libros[i].getNumPrestado());
+         System.out.println("----------------");
       }
    }
 }
