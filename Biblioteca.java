@@ -13,6 +13,10 @@ public class Biblioteca {
         gestor.nuevoUsuario(usuario1);
         Usuario usuario2 = new Usuario("Juan", "5678", true);
         gestor.nuevoUsuario(usuario2);
+        Libro libro1 = new Libro("El Quijote", "Cervantes", "Novela", true);
+        libros.nuevoLibro(libro1);
+        Libro libro2 = new Libro("El Señor de los Anillos", "Tolkien", "Fantasía", true);
+        libros.nuevoLibro(libro2);
 
         // Login del usuario
         boolean adminLog = false;
