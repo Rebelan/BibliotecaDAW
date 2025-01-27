@@ -23,17 +23,36 @@ public class GestorUsuarios {
         }
     }
 
-    public void usuarioPrestamos(){
+    public void usuarioPrestamos() {
 
         int aux = 0;
-        String nombre="";
+        String nombre = "";
         for (int i = 0; i < usuarios.length; i++) {
             if (aux < usuarios[i].getNumPrestados()) {
                 aux = usuarios[i].getNumPrestados();
                 nombre = usuarios[i].getNomUsuario();
             }
         }
-        System.out.println("El usuario: "+nombre+" es el que mas prestamos tiene con "+aux+" libros"); 
+        System.out.println("El usuario: " + nombre + " es el que mas prestamos tiene con " + aux + " libros");
     }
+
+   public Usuario buscarUsuario(String nombre, String passwd){
+        Usuario userBuscar = null;
+        boolean encontrado = false;
+        for (int i = 0; i < numUsuarios; i++) {
+            if (usuarios[i].getNomUsuario().equals(nombre) && usuarios[i].getPasswd().equals(passwd)) {
+                userBuscar = usuarios[i];
+                encontrado = true;
+            }
+        }
+        if (encontrado) {
+            System.out.println("Bienvenido " + userBuscar.getNomUsuario());
+        }else{
+            System.out.println("Usuario/contraseña incorrectos o no existente");
+        }
+        return userBuscar;
+   }
+
+    
 
 }

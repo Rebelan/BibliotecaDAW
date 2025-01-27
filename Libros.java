@@ -91,5 +91,17 @@ public class Libros {
    public void devolverLibro(Libro libro) {
       libro.setDisponible(true);
    }
+   public void LibrosDisponibles(){
+      System.out.println("Los libros disponibles son: ");
+      for (int i = 0; i < numLibros; i++) {
+         if (libros[i].getDisponible()) {
+            System.out.println("----------------");
+            System.out.println("Título: " + libros[i].getTitulo());
+            System.out.println("Autor: " + libros[i].getAutor());
+            System.out.println("Categoría: " + libros[i].getCategoria());
+            System.out.println("----------------");
+         }
+      }
+   }
    
 }

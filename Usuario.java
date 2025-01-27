@@ -66,7 +66,6 @@ public class Usuario {
                 prestados[j] = prestados[j + 1];
             }
             numPrestados--;
-            System.out.println("El libro se ha devuelto correctamente");
         } else {
             System.out.println("No se ha encontrado el libro");
         }
