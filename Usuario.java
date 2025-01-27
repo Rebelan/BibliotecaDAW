@@ -1,5 +1,7 @@
 // Esta clase contiene las características del usuario, así como los libros que tiene en propiedad
-
+/*
+ * @author: Abel Constantino Muñoz y Alexander Plantón Jarmolowicz
+ */
 public class Usuario {
     private String nomUsuario;
     private String passwd;

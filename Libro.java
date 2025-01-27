@@ -1,5 +1,7 @@
 // Esta clase contiene las características de los libros
-
+/*
+ * @author: Abel Constantino Muñoz y Alexander Plantón Jarmolowicz
+ */
 public class Libro {
     private String titulo;
     private String autor;

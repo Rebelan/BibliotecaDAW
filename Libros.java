@@ -1,5 +1,7 @@
 // Esta clase es la gestora de la clase libro, y contiene un array de libros y un contador de libros
-
+/*
+ * @author: Abel Constantino Muñoz y Alexander Plantón Jarmolowicz
+ */
 import java.util.Arrays;
 
 public class Libros {

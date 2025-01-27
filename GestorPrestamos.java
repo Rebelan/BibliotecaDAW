@@ -1,3 +1,7 @@
+
+/*
+ * @author: Abel Constantino Muñoz y Alexander Plantón Jarmolowicz
+ */
 public class GestorPrestamos {
     private Libro[] prestados;
     private int indice;

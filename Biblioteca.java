@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+
+
+/*
+ * @author: Abel Constantino Muñoz y Alexander Plantón Jarmolowicz
+ */
 public class Biblioteca {
 
     public static Scanner sc = new Scanner(System.in);

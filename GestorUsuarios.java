@@ -1,4 +1,6 @@
-
+/*
+ * @author: Abel Constantino Muñoz y Alexander Plantón Jarmolowicz
+ */
 public class GestorUsuarios {
     private Usuario[] usuarios;
     private int numUsuarios;
