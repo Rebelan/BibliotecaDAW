@@ -117,6 +117,7 @@ public class Libros {
             }
          }
       }
+      System.out.println("Los libros ordenados por número de veces prestado son: ");
       for (int i = 0; i < numLibros; i++) {
          System.out.println("----------------");
          System.out.println("Título: " + libros[i].getTitulo());
