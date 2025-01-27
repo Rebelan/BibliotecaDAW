@@ -84,14 +84,17 @@ public class Libros {
          System.out.println("-------------");
       }
    }
+
    public void prestarLibro(Libro libro) {
       libro.setDisponible(false);
       libro.setNumPrestado(libro.getNumPrestado() + 1);
    }
+
    public void devolverLibro(Libro libro) {
       libro.setDisponible(true);
    }
-   public void LibrosDisponibles(){
+
+   public void LibrosDisponibles() {
       System.out.println("Los libros disponibles son: ");
       for (int i = 0; i < numLibros; i++) {
          if (libros[i].getDisponible()) {
@@ -104,40 +107,18 @@ public class Libros {
       }
    }
 
-   public void masPrestados() {
-      int m1 = 0;
-      int m2 = 0;
-      int m3 = 0;
-
-      Libro l1 = new Libro();
-      Libro l2 = new Libro();
-      Libro l3 = new Libro();
-
-      for (int i = 0; i < libros.length; i++) {
-         if (libros[i].getNumPrestado() > m1) {
-            m1 = libros[i].getNumPrestado();
-            l1 = libros[i];
-         } else if (libros[i].getNumPrestado() > m2) {
-            m2 = libros[i].getNumPrestado();
-            l2 = libros[i];
-         } else if (libros[i].getNumPrestado() > m3) {
-            m3 = libros[i].getNumPrestado();
-            l3 = libros[i];
-         }
-
-      }
-
-      System.out.println("Los tres libros más prestados son: ");
-      for (int i = 0; i < libros.length; i++) {
-         if (l1.getTitulo().equals(libros[i].getTitulo()) || l2.getTitulo().equals(libros[i].getTitulo())
-               || l3.getTitulo().equals(libros[i].getTitulo())) {
-            System.out.println("Título: " + libros[i].getTitulo());
-            System.out.println("Autor: " + libros[i].getAutor());
-            System.out.println("Categoría: " + libros[i].getCategoria());
-            System.out.println("-------------");
+   public void OrderPorPrestamos() {
+      for (int i = 0; i < numLibros - 1; i++) {
+         for (int j = i + 1; j < numLibros; j++) {
+            if (libros[i].getNumPrestado() < libros[j].getNumPrestado()) {
+               Libro aux = libros[i];
+               libros[i] = libros[j];
+               libros[j] = aux;
+            }
          }
       }
-
+      for (int i = 0; i < numLibros; i++) {
+         System.out.println("Título: " + libros[i].getTitulo() + " Número de veces prestado: " + libros[i].getNumPrestado());
+      }
    }
-   
 }

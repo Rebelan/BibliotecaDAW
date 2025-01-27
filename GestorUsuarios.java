@@ -23,17 +23,16 @@ public class GestorUsuarios {
         }
     }
 
-    public void usuarioPrestamos() {
-
-        int aux = 0;
-        String nombre = "";
-        for (int i = 0; i < usuarios.length; i++) {
-            if (aux < usuarios[i].getNumPrestados()) {
-                aux = usuarios[i].getNumPrestados();
-                nombre = usuarios[i].getNomUsuario();
+    public void UsuarioConMasPrestamos(){
+        int maxPrestamos = 0;
+        Usuario userMax = new Usuario();
+        for (int i = 0; i < numUsuarios; i++) {
+            if (usuarios[i].getNumPrestados() >= maxPrestamos) {
+                maxPrestamos = usuarios[i].getNumPrestados();
+                userMax = usuarios[i];
             }
         }
-        System.out.println("El usuario: " + nombre + " es el que mas prestamos tiene con " + aux + " libros");
+        System.out.println("El usuario con más préstamos es: " + userMax.getNomUsuario() + " con " + maxPrestamos + " préstamos");
     }
 
    public Usuario buscarUsuario(String nombre, String passwd){

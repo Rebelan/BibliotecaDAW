@@ -15,14 +15,14 @@ public class Biblioteca {
         gestor.nuevoUsuario(usuario2);
         Libro libro1 = new Libro("El Quijote", "Cervantes", "Novela", true);
         libros.nuevoLibro(libro1);
-        Libro libro2 = new Libro("El Señor de los Anillos", "Tolkien", "Fantasía", true);
+        Libro libro2 = new Libro("esdla", "Tolkien", "Fantasía", true);
         libros.nuevoLibro(libro2);
 
         // Login del usuario
         boolean adminLog = false;
         boolean seguir = true;
         boolean loggeado = true;
-        boolean salir =false;
+        boolean salir = false;
         while (seguir && !salir) {
             System.out.println("Introduce tu nombre de usuario: ");
             String nombreUsuario = sc.nextLine();
@@ -36,7 +36,7 @@ public class Biblioteca {
                 } else {
                     adminLog = false;
                 }
-            }else{
+            } else {
                 loggeado = false;
             }
 
@@ -64,7 +64,7 @@ public class Biblioteca {
                         } else {
                             System.out.println("No se ha encontrado el libro");
                         }
-                    break;
+                        break;
                     case 3:
                         System.out.println("Introduce el nombre del usuario: ");
                         String nombre = sc.nextLine();
@@ -86,7 +86,7 @@ public class Biblioteca {
                         if (libroPrestar != null) {
                             libros.prestarLibro(libroPrestar);
                             prestamos.realizarPrestamo(libroPrestar);
-                            usuario1.TomarPrestado(libroPrestar);
+                            usuarioLog.TomarPrestado(libroPrestar);
 
                         } else {
                             System.out.println("No se ha encontrado el libro");
@@ -99,7 +99,7 @@ public class Biblioteca {
                         if (libroDevolver != null) {
                             libros.devolverLibro(libroDevolver);
                             prestamos.devolverPrestamo(tituloDevolver);
-                            usuario1.DevolverLibro(tituloDevolver);
+                            usuarioLog.DevolverLibro(tituloDevolver);
                         } else {
                             System.out.println("No se ha encontrado el libro");
                         }
@@ -166,6 +166,13 @@ public class Biblioteca {
                         loggeado = false;
                         System.out.println("¡Adios!");
                         break;
+                    case 12:
+                        loggeado = false;
+                        salir = true;
+                        break;
+                    default:
+                        seguir = false;
+                        break;
                 }
             }
             while (!adminLog && loggeado) {
@@ -205,7 +212,8 @@ public class Biblioteca {
                         loggeado = false;
                         System.out.println("¡Adios!");
                         break;
-                        case 5:
+                    case 5:
+                        loggeado = false;
                         salir = true;
                     default:
                         seguir = false;
@@ -217,8 +225,8 @@ public class Biblioteca {
         System.out.println("----Informe----");
         System.out.println("Préstamos totales: " + prestamos.getTotalPrestamos());
         System.out.println("Préstamos activos: " + prestamos.getIndice());
-        libros.masPrestados();
-        gestor.usuarioPrestamos();
+        gestor.UsuarioConMasPrestamos();
+        libros.OrderPorPrestamos();
 
     }
 
@@ -234,7 +242,7 @@ public class Biblioteca {
         System.out.println("9. Buscar libros por autor");
         System.out.println("10. Buscar un libro por categoria");
         System.out.println("11. Cambiar de usuario");
-
+        System.out.println("12. Salir");
     }
 
     public static void menuVisualUsuario() {
@@ -242,7 +250,7 @@ public class Biblioteca {
         System.out.println("2. Pedir prestado un libro");
         System.out.println("3. Devolver un libro");
         System.out.println("4. Cambiar de usuario");
-
+        System.out.println("5. Salir");
     }
 
 }
