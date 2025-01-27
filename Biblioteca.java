@@ -217,7 +217,7 @@ public class Biblioteca {
         System.out.println("----Informe----");
         System.out.println("Préstamos totales: " + prestamos.getTotalPrestamos());
         System.out.println("Préstamos activos: " + prestamos.getIndice());
-        System.out.println("Libros más prestados: ");
+        libros.masPrestados();
         gestor.usuarioPrestamos();
 
     }
