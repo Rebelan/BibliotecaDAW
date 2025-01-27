@@ -22,7 +22,8 @@ public class Biblioteca {
         boolean adminLog = false;
         boolean seguir = true;
         boolean loggeado = true;
-        while (seguir) {
+        boolean salir =false;
+        while (seguir && !salir) {
             System.out.println("Introduce tu nombre de usuario: ");
             String nombreUsuario = sc.nextLine();
             System.out.println("Introduce tu contraseña: ");
@@ -204,6 +205,8 @@ public class Biblioteca {
                         loggeado = false;
                         System.out.println("¡Adios!");
                         break;
+                        case 5:
+                        salir = true;
                     default:
                         seguir = false;
                         break;
@@ -230,7 +233,7 @@ public class Biblioteca {
         System.out.println("8. Buscar un libro por titulo");
         System.out.println("9. Buscar libros por autor");
         System.out.println("10. Buscar un libro por categoria");
-        System.out.println("11. Salir");
+        System.out.println("11. Cambiar de usuario");
 
     }
 
@@ -238,7 +241,7 @@ public class Biblioteca {
         System.out.println("1. Consultar libros disponibles");
         System.out.println("2. Pedir prestado un libro");
         System.out.println("3. Devolver un libro");
-        System.out.println("4. Salir");
+        System.out.println("4. Cambiar de usuario");
 
     }
 
